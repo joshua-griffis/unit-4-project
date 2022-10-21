@@ -1,7 +1,8 @@
+from pickle import GET
 from django.shortcuts import render
 from app.forms import *
 from .models import *
-from django.views.generic import CreateView
+
 
 # Create your views here.
 
@@ -12,16 +13,18 @@ def root(request):
         {"name": "The Renaissance Vase",
          "desc": "this item is from the anime 'Oran Highschool Host Club'",
          "img": "images/vase.jpg",
-         "price": 1000},
+         "price": 1000,
+         "cart": True},
 
-        {"name": "item",
-         "desc": "this item is an example item",
+        {"name": "",
+         "desc": "",
          "img": "images/conjuration.gif",
-         "price": 10},
+         "price": 10,
+         "cart": False},
     ]
     for item in content:
         create_item(item["name"], item["desc"],
-                    item["img"], item["price"])
+                    item["img"], item["price"], item["cart"])
     return render(request, 'root.html', {"items": Item.objects.all()})
 
 
