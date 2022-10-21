@@ -12,7 +12,13 @@ def root(request):
 
 def videogames(request):
     Item.objects.all().delete()
-    content = []
+    content = [
+        {"name": "Diamond Pickaxe",
+         "desc": "This item is pretty self explanatory, its a pickaxe made of diamonds from the video game Minecraft.",
+         "img": "images/diamond pickaxe.gif",
+         "price": 180000,
+         "cart": False},
+    ]
     for item in content:
         create_item(item["name"], item["desc"],
                     item["img"], item["price"], item["cart"])
