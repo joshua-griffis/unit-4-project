@@ -9,11 +9,17 @@
     <link rel="stylesheet" href="{% static "styles.css" %}">
   </head>
   <body>
-    <h1>Cart</h1>
+    <h1>Welcome to Our Fanticy Shop</h1>
+    <a href="/cart/"><button>view cart</button></a>
     <a href="/"><button>back</button></a>
-    {% for item in cart %}
-    <h1>{{ item.name }}</h1>
+    {% block content %}
+    {% for item in items %}
+    <h2>{{ item.name }}</h2>
     <img src="{% static item.image %}" alt="item" />
+    <p>{{ item.description }}</p>
+    <p>${{ item.price }}</p>
+    <input type="checkbox">add to cart</input>
     {% endfor %}
+    {% endblock content %}
   </body>
 </html>

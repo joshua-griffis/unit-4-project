@@ -6,8 +6,11 @@ from .models import *
 
 # Create your views here.
 
-
 def root(request):
+    return render(request, 'root.html')
+
+
+def anime(request):
     Item.objects.all().delete()
     content = [
         {"name": "The Renaissance Vase",
@@ -21,11 +24,23 @@ def root(request):
          "img": "images/devil fruit.jpg",
          "price": 5000000000,
          "cart": True},
+
+        {"name": "Kurapika's Judgement Chain",
+         "desc": "This item is one of the chains Kurapika uses in the anime Hunter X Hunter.",
+         "img": "images/conjuration.gif",
+         "price": 10000000,
+         "cart": False},
+
+        {"name": "Greed Island the video game",
+         "desc": "This item is a very dangerous video game from the world of Hunter X Hunter.",
+         "img": "images/greed island.jpg",
+         "price": 8000000000,
+         "cart": False},
     ]
     for item in content:
         create_item(item["name"], item["desc"],
                     item["img"], item["price"], item["cart"])
-    return render(request, 'root.html', {"items": Item.objects.all()})
+    return render(request, 'anime.html', {"items": Item.objects.all()})
 
 
 def cart(request):

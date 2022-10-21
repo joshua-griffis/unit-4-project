@@ -5,6 +5,7 @@ from app import models
 
 urlpatterns = [
     path('', root, name="root"),
+    path('anime/', anime, name="anime"),
     path('cart/', cart, name="cart"),
     path('admin/', admin.site.urls),
 ]

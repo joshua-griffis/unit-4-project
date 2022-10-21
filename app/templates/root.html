@@ -9,16 +9,9 @@
     <link rel="stylesheet" href="{% static "styles.css" %}">
   </head>
   <body>
-    <h1>Hi</h1>
+    <h1>Welcome to Our Fanticy Shop</h1>
+    <h3>Catagories</h3>
     <a href="/cart/"><button>view cart</button></a>
-    {% block content %}
-    {% for item in items %}
-    <p>{{ item.name }}</p>
-    <img src="{% static item.image %}" alt="item" />
-    <p>{{ item.description }}</p>
-    <p>${{ item.price }}</p>
-    <input type="checkbox">add to cart</input>
-    {% endfor %}
-    {% endblock content %}
+    <a href="/anime/"><button>view anime</button></a>
   </body>
 </html>
