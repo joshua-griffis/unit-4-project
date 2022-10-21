@@ -10,6 +10,15 @@ def root(request):
     return render(request, 'root.html')
 
 
+def videogames(request):
+    Item.objects.all().delete()
+    content = []
+    for item in content:
+        create_item(item["name"], item["desc"],
+                    item["img"], item["price"], item["cart"])
+    return render(request, 'videogames.html', {"items": Item.objects.all()})
+
+
 def anime(request):
     Item.objects.all().delete()
     content = [

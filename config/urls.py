@@ -7,5 +7,6 @@ urlpatterns = [
     path('', root, name="root"),
     path('anime/', anime, name="anime"),
     path('cart/', cart, name="cart"),
+    path('videogames/', videogames, name="videogames"),
     path('admin/', admin.site.urls),
 ]
