@@ -63,6 +63,12 @@ def anime(request):
          "img": "images/Ichigo Bankai.jpg",
          "price": "100000000",
          "cart": False},
+         
+         {"name": "Sukuna Ryomen Finger",
+         "desc": "This item is from the anime called Jujutsu Kaisen",
+         "img": "images/finger.jpg",
+         "price": "200000000000",
+         "cart": False},
     ]
     for item in content:
         create_item(item["name"], item["desc"],
