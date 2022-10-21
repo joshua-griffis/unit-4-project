@@ -13,6 +13,7 @@
     <a href="/"><button>back</button></a>
     {% for item in cart %}
     <p>{{ item.name }}</p>
+    <img src="{% static item.image %}" alt="item" />
     {% endfor %}
   </body>
 </html>
