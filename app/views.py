@@ -45,6 +45,12 @@ def anime(request):
          "img": "images/greed island.jpg",
          "price": 8000000000,
          "cart": False},
+         
+        {"name": "Ichigo Bankai",
+        "desc": "This item is from the anime called BLEACH and the second form Zanpakuto.",
+        "img": "images/Ichigo Bankai.jpg",
+        "price": "100000000",
+        "cart": False},
     ]
     for item in content:
         create_item(item["name"], item["desc"],
