@@ -16,11 +16,11 @@ def root(request):
          "price": 1000,
          "cart": True},
 
-        {"name": "",
-         "desc": "",
-         "img": "images/conjuration.gif",
-         "price": 10,
-         "cart": False},
+        {"name": "Gomu Gomu no Mi",
+         "desc": "This item is from the anime called One Piece",
+         "img": "images/devil fruit.jpg",
+         "price": 5000000000,
+         "cart": True},
     ]
     for item in content:
         create_item(item["name"], item["desc"],
