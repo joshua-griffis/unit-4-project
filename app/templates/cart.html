@@ -9,14 +9,10 @@
     <link rel="stylesheet" href="{% static "styles.css" %}">
   </head>
   <body>
-    <h1>Hi</h1>
-    <a href="/cart/"><button>view cart</button></a>
-    {% for item in items %}
+    <h1>Cart</h1>
+    <a href="/"><button>back</button></a>
+    {% for item in cart %}
     <p>{{ item.name }}</p>
-    <img src="{% static item.image %}" alt="item" />
-    <p>{{ item.description }}</p>
-    <p>${{ item.price }}</p>
-
     {% endfor %}
   </body>
 </html>
