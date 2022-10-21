@@ -8,7 +8,7 @@ class Item(models.Model):
     name = models.TextField()
     description = models.TextField()
     image = models.TextField()
-    price = models.IntegerField()
+    price = models.TextField()
     cart = models.BooleanField()
 
 
