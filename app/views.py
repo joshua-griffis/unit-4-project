@@ -18,6 +18,12 @@ def videogames(request):
          "img": "images/diamond pickaxe.gif",
          "price": 180000,
          "cart": False},
+
+        {"name": "The Renaissance Vase",
+         "desc": "this item is from the anime 'Oran Highschool Host Club'",
+         "img": "images/vase.jpg",
+         "price": 1000,
+         "cart": True},
     ]
     for item in content:
         create_item(item["name"], item["desc"],
@@ -51,12 +57,12 @@ def anime(request):
          "img": "images/greed island.jpg",
          "price": 8000000000,
          "cart": False},
-         
+
         {"name": "Ichigo Bankai",
-        "desc": "This item is from the anime called BLEACH and the second form Zanpakuto.",
-        "img": "images/Ichigo Bankai.jpg",
-        "price": "100000000",
-        "cart": False},
+         "desc": "This item is from the anime called BLEACH and the second form Zanpakuto.",
+         "img": "images/Ichigo Bankai.jpg",
+         "price": "100000000",
+         "cart": False},
     ]
     for item in content:
         create_item(item["name"], item["desc"],
